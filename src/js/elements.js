@@ -1,0 +1,27 @@
+const footerLogo = {
+    template: '<svg xmlns="http://www.w3.org/2000/svg" width="174" height="75.471" viewBox="0 0 174 75.471"><path d="M32.913,30.292h9.206l1.266,2.414a10.358,10.358,0,0,1,7.422-3.1c8.689,0,13.464,7.07,13.522,15.75,0,8.564-4.776,15.749-13.464,15.749A10.467,10.467,0,0,1,43.443,58V69.838l-10.53,5.633ZM43.385,41.328V49.26a5.112,5.112,0,0,0,4.6,2.817c3.625,0,5.754-2.874,5.754-6.725,0-3.909-2.129-6.84-5.754-6.84A5.151,5.151,0,0,0,43.385,41.328ZM0,51.214c0-5.805,5.064-9.6,11.565-9.6a13.182,13.182,0,0,1,6.56,1.667V42.19c0-2.357-2.129-4.024-6.444-4.024a16.326,16.326,0,0,0-4.373.575l-1.5-2.817L3.625,31.786l-.172-.345a45.209,45.209,0,0,1,6.041-1.495c.115,0,.288-.057.4-.057h.057c1.036-.115,2.071-.23,3.165-.288H14.27c8.919,0,13.982,4.2,13.982,12.186V60.411H18.125V58.859c-.978.977-3.855,2.069-7.078,2.069C5.064,60.929,0,57.595,0,51.214Zm9.839-.172c0,2.069,2.071,2.931,4.143,2.931a4.828,4.828,0,0,0,4.2-2.012V50.237a4.6,4.6,0,0,0-4.2-2.069C11.911,48.168,9.839,49.03,9.839,51.042ZM68.3,30.234H78.772V50.869L68.3,56.5ZM174,0,151.042,22.647,117.5,30.177ZM67.609,22.072a5.984,5.984,0,1,1,5.984,5.978A5.981,5.981,0,0,1,67.609,22.072Z" fill="#585858"/></svg>'
+}
+const navLogo = {
+    template: '<svg xmlns="http://www.w3.org/2000/svg" width="111" height="48.471" viewBox="0 0 111 48.471"><path d="M21,19.455h5.873l.808,1.55a6.587,6.587,0,0,1,4.735-1.993c5.543,0,8.589,4.541,8.626,10.115,0,5.5-3.047,10.115-8.589,10.115a6.656,6.656,0,0,1-4.735-1.993v7.6L21,48.471Zm6.68,7.088v5.094a3.259,3.259,0,0,0,2.937,1.809c2.312,0,3.671-1.846,3.671-4.319,0-2.51-1.358-4.393-3.671-4.393A3.284,3.284,0,0,0,27.677,26.543ZM0,32.892c0-3.728,3.23-6.165,7.378-6.165A8.365,8.365,0,0,1,11.563,27.8v-.7c0-1.514-1.358-2.584-4.111-2.584a10.349,10.349,0,0,0-2.79.369l-.954-1.809L2.312,20.414l-.11-.221a28.682,28.682,0,0,1,3.854-.96c.074,0,.184-.037.257-.037H6.35c.661-.074,1.321-.148,2.019-.185H9.1c5.689,0,8.92,2.695,8.92,7.826V38.8h-6.46v-1a7.273,7.273,0,0,1-4.515,1.329C3.23,39.131,0,36.99,0,32.892Zm6.277-.111c0,1.329,1.321,1.883,2.643,1.883a3.073,3.073,0,0,0,2.68-1.292V32.265a2.929,2.929,0,0,0-2.68-1.329C7.6,30.936,6.277,31.49,6.277,32.782ZM43.57,19.418h6.68V32.671l-6.68,3.618ZM111,0,96.354,14.545l-21.4,4.836ZM43.13,14.176a3.818,3.818,0,1,1,3.817,3.839A3.828,3.828,0,0,1,43.13,14.176Z" fill="#bd0a24"/></svg>'
+}
+const redAngle = {
+    template: '<svg xmlns="http://www.w3.org/2000/svg" width="2566.633" height="1801.797" viewBox="0 0 2566.633 1801.797"><path id="Path_4084" data-name="Path 4084" d="M0,1242.584,2324.225,0,1379.862,932.53Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 601.554)" fill="#bd0a24" opacity="0.828"/></svg>'
+}
+const scrollDown = {
+    template: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><g transform="translate(-893 -1010)" opacity="0.998"><path d="M10,2a8.009,8.009,0,0,0-8,8V20a8,8,0,0,0,16,0V10a8.009,8.009,0,0,0-8-8m0-2A10,10,0,0,1,20,10V20A10,10,0,0,1,0,20V10A10,10,0,0,1,10,0Z" transform="translate(893 1010)" fill="#f7f7f7"/><path d="M1,5.653H-1V0H1Z" transform="translate(902.596 1017.328)" fill="#f7f7f7"/></g></svg>'
+}
+const calendarIcon = {
+    template: `<svg class="icon-calendar" xmlns="http://www.w3.org/2000/svg" width="39" height="36.532" viewBox="0 0 39 36.532"><g transform="translate(-727 -2331.468)"><rect width="37" height="8" rx="1" transform="translate(728 2338)" class="red"/><g transform="translate(7619.758 1954.599)"><g transform="translate(-6892.758 381.401)" fill="none" class="line" stroke-width="2"><rect width="39" height="32" rx="6" stroke="none"/><rect x="1" y="1" width="37" height="30" rx="5" fill="none"/></g><line x2="36.336" transform="translate(-6891.923 391.92)" fill="none" class="line" stroke-width="2"/><g transform="translate(-6882.813 376.87)"><line y1="9.839" fill="none" class="line" stroke-width="2"/><line y1="9.839" transform="translate(18.83)" fill="none" class="line" stroke-width="2"/></g><path d="M-6914.567,356.723l3.7,3.7,9.245-9.246" transform="translate(36.032 44.553)" fill="none" class="line" stroke-width="2"/></g></g></svg>`
+}
+const contentMask = {
+    template: `<svg xmlns="http://www.w3.org/2000/svg" width="1969.065" height="1034.395" viewBox="0 0 1969.065 1034.395"><path d="M-3800-20753.836l1,812.533h865.775l1102.29-1034.395H-3582.779Z" transform="translate(3800 20975.697)" fill="#fff"/></svg>`
+}
+const shapeLogoLarge = {
+    template: `<svg class="shape__logo--large" xmlns="http://www.w3.org/2000/svg" width="369.164" height="189.595" viewBox="0 0 469.164 249.595"><path d="M42.98,248.516,508,7,319.056,188.252Z" transform="matrix(1, 0.017, -0.017, 1, -38.636, -7.749)" fill="#bd0a24"/></svg>`
+}
+const searchIcon = {
+    template: `<svg id="Group_3127" data-name="Group 3127" xmlns="http://www.w3.org/2000/svg" width="25.478" height="25.478" viewBox="0 0 25.478 25.478"><g id="Ellipse_44" data-name="Ellipse 44" transform="translate(0)" fill="none" stroke="#95989a" stroke-width="2"><circle cx="10.616" cy="10.616" r="10.616" stroke="none"/><circle cx="10.616" cy="10.616" r="9.616" fill="none"/></g><line id="Line_72" data-name="Line 72" x2="7.077" y2="7.077" transform="translate(17.694 17.694)" fill="none" stroke="#95989a" stroke-width="2"/></svg>
+  `
+}
+
+export  { footerLogo, navLogo, redAngle, scrollDown, calendarIcon, contentMask, shapeLogoLarge, searchIcon }

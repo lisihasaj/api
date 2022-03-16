@@ -1,0 +1,43 @@
+.partners__slider {
+    position: relative;
+    text-align: center;   
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: $white;
+    .swiper {
+        margin: 70px 0;
+        &-wrapper {
+            align-items: center;
+        }
+        &-slide {
+            a {
+                z-index: 1;
+                display: inline-block;
+                img {
+                    max-height: 70px;
+                    z-index: 0;
+                } 
+            }
+        }
+    }
+    .btn {
+        &-prev,
+        &-next {
+            position: absolute;
+            bottom: 40%;
+            margin: auto;
+            height: fit-content;
+            width: fit-content;
+            font-size: 20px;
+            @include mobile-scr {
+                display: none;
+            }
+        }
+        &-prev {
+            left: 2%;
+        }
+        &-next {
+            right: 2%;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.form {
+    transition: 0.3s ease-in-out opacity;
+    &.loading {
+        opacity: 0.5;
+    }    
+    input, textarea, select {
+        border: 0;
+        background-color: #2F2F2F;
+        color: rgba($white, 0.48);
+        font-size: 16px;
+        padding-left: 10px;
+        font-family: $metric;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    input, select {
+        height: 37px;
+    }
+    textarea {
+        padding-top: 15px;
+        resize: vertical;
+    }
+    .input {
+        position: relative;
+        margin-bottom: 12px;
+        &__select {
+            position: relative;
+            &::before {
+                content: '\e801';
+                font-family: 'icons';
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(calc(-50% - 5px));
+            }
+        }
+    }
+    &__group {
+        justify-content: space-between;
+        gap: 10px;
+        .input {
+            width: 100%;
+        }
+    }
+    .error {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 11px;
+        color: red;
+    }
+    .submit {
+        align-items: center;
+        justify-content: space-between;
+        .clearForm-btn {
+            font-weight: $light;
+            color: rgba($white, 0.4);
+        }
+    }
+}
+
+.response-message {
+    color: $white;
+    margin-top: 20px;
+}

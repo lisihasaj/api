@@ -1,0 +1,35 @@
+.d-flex {
+    display: flex;
+}
+
+.arrow-right {
+    position: relative;
+    padding-right: 20px;
+    display: inline-block;
+    &::before {
+        content: '\e804'; 
+        font-family: 'icons';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.container {
+    padding: 0 75px;
+    @include lg-computer-scr {
+        padding: 0 50px;
+    }
+    @include computer-scr {
+        padding: 0 30px;
+    }
+    @include mobile-scr {
+        padding: 0 15px;
+    }
+}
+
+.dropdown {
+    position: relative;
+    overflow-y: hidden;
+}

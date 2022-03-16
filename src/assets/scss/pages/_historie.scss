@@ -1,0 +1,96 @@
+.historie {
+    padding-bottom: 400px;
+    .default__content {
+        &-header__text {
+            &--lg {
+                max-width: 1145px;
+            }
+        }
+        &-navigation {
+            &--lg {
+                display: none;
+            }
+        }
+    }
+}
+
+.cards {
+    margin-top: 50px;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        @include mobile-scr {
+            flex-direction: column;
+            align-items: center;
+        }        
+    }
+    &__item {
+        position: relative;
+        width: calc(100% / 3 - 20px);
+        box-shadow: 0px 1px 28px 13px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        border-radius: 40px;
+        transition: 0.5s max-height ease-in-out;
+        padding: 0 15px 50px;
+        cursor: pointer;
+        &.active {
+            z-index: 3;
+        }
+        @include md-computer-scr {
+            width: calc(100% / 2 - 20px);
+        }
+        @include mobile-scr {
+            width: 100%;
+        }
+        &__header {
+            text-align: center;
+            span {
+                color: $red;
+                &:first-child {
+                    @include fontSize(140, 120, 100, 80, 70, 60);
+                    font-weight: $semiBold;
+                    display: block;
+                }
+                &:last-child {
+                    font-size: 18px;
+                }
+            }
+        }        
+        &__content {
+            position: absolute;
+            top: calc(100% - 50px);
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            color: rgba(88, 88, 88, 0.75);
+            font-size: 20px;
+            font-weight: 500;
+            background-color: $white;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 21px 28px 0px rgb(0 0 0 / 10%);
+            padding: 20px;
+            z-index: 1;
+            h2 {
+                font-size: 20px;
+                font-weight: normal;
+            }
+        }
+
+        &-btn {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            z-index: 2;
+            border-radius: 100%;
+            background-color: $white;
+            padding: 10px;
+        }
+        @include mobile-scr {
+            // max-height: 85px;
+            margin-bottom: 20px;
+        }        
+    }
+}

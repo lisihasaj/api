@@ -1,0 +1,310 @@
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    .nav {
+        &__wrapper {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            background-color: #E3E9EB;
+            filter: drop-shadow(0 1 14px rgba($black, 0.15));
+            z-index: 2;
+        }
+        &__links {
+            max-width: 1320px;
+            width: 100%;
+            @include computer-scr {
+                display: none;
+            }
+            > ul {
+                justify-content: space-between;
+                height: 100%;
+                gap: 40px;
+                @include computer-scr {
+                    gap: 20px;
+                }
+                @include tablet-scr {
+                    gap: 15px;
+                }
+                &.active {
+                    li {
+                        border-bottom-color: $red;
+                        opacity: 0.3;
+                        &.active {
+                            opacity: 1;
+                            a {
+                                border-top-color: $red;
+                            }
+                        }
+                    }
+                }
+                li {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 1px solid transparent;
+                    transition: 0.3s border-bottom-color ease-in-out;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        color: $red;
+                        font-size: 18px;
+                        font-weight: $medium;
+                        transition: 0.3s opacity ease-in-out, 0.3s border-top-color ease-in-out;
+                        border-top: 3px solid transparent;
+                        &.active,
+                        &:hover {
+                            border-top-color: $red;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+        &__logo {
+            min-width: 115px;
+        }
+        &__locales {
+            align-items: center;
+            justify-content: flex-end;
+            min-width: 115px;
+            a {
+                margin-right: 10px;
+                color: $red;
+                font-weight: $light;
+                opacity: 0.5;
+                font-size: 14px;
+                transition: 0.3s ease-in-out opacity;
+                text-transform: uppercase;
+                &:hover,
+                &.active {
+                    font-weight: $medium;
+                    opacity: 1;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        // Dropdown Elements
+        &__dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #FAFAFA;
+            padding-top: 30px;
+            // Sub Nav Links
+            display: flex;
+            flex-direction: column;
+            @include computer-scr {
+                padding-top: 0;
+            }
+            @include tablet-scr {
+                height: 94.8vh;
+            }
+            &__links {
+                max-width: 1320px;
+                width: 100%;
+                margin: auto;
+                gap: 40px;                
+                @include computer-scr {
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-top: 20px;
+                }
+                @include tablet-scr {
+                    gap: 15px;
+                }                
+                &__wrapper {
+                    padding: 0 30px;
+                    @media(min-width: $computerBreakpoint + 1) {
+                        padding: 0 145px;
+                    }
+                    @include computer-scr {
+                        order: 2;
+                    }
+                }
+                // Hide parents on desktop
+                > li {
+                    width: 100%;
+                    transition: 0.1s ease-in-out opacity;
+                    > a {
+                        font-size: 22px;
+                        font-weight: $medium;
+                        color: $red;
+                        border-bottom: 1px solid $red;
+                        display: block;
+                        padding-bottom: 15px;                        
+                        @media(min-width: $computerBreakpoint + 1) {
+                            display: none;
+                        }
+                        @include computer-scr  {
+                            font-size: 18px;
+                        }        
+                    }
+                }
+                ul {
+                    @media(min-width: $computerBreakpoint + 1) {
+                        display: block !important;
+                    }
+                    @include computer-scr {
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    li {
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            font-size: 16px;
+                            font-weight: normal;
+                            color: #585858;
+                            border-bottom: 1px solid rgba($red, 0.18);
+                            padding-bottom: 20px;
+                            transition: 0.3s ease-in-out border-bottom-color, 0.3s ease-in-out color;
+                            margin-top: 20px;
+                            @include computer-scr  {
+                                font-size: 14px;
+                                padding-bottom: 15px;
+                                margin-top: 15px;
+                            }
+                            @include tablet-scr {
+                                margin-top: 10px;
+                                padding-bottom: 15px;
+                            }
+                            &:hover,
+                            &.active {
+                                border-bottom-color: $red;
+                                font-weight: $medium;
+                                color: $red;
+                            }
+                            i {
+                                color: $red;
+                            }
+                        }
+                    }
+                }                    
+            }
+        }
+        &__section-links {
+            border-top: 1px solid rgba($red, 0.20);
+            margin-top: 120px;
+            text-align: center;
+            padding: 20px 0;
+            @include computer-scr {
+                border-bottom: 1px solid $red;
+                margin-top: 80px;
+                order: 3;
+            }
+            @include tablet-scr {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            @include mobile-scr {
+                display: none;
+            }
+            a {
+                margin-right: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+// SIDEBAR MENU
+
+.nav {
+    &__sidebar {
+        position: fixed;
+        top: 200px;
+        left: 100px;
+        width: 235px;
+        z-index: 1;
+        @include lg-computer-scr {
+            left: 50px;
+        }
+        @include computer-scr {
+            display: none;
+        }
+        @media(max-height: 800px) {
+            max-height: 500px;
+            overflow: auto;
+            top: 150px;
+        }
+        &__section {
+            position: relative;
+            color: $red;
+            h3 {
+                font-size: 18px;
+                font-weight: normal;
+            }
+            a.back {
+                position: absolute;
+                top: 50%;
+                left: -30px;
+                transform: translateY(-50%);
+                border-bottom: 0;
+                padding: 0;
+            }
+        }
+        i {
+            font-size: 13px;
+            color: $red;
+        }
+        a {
+            border-bottom: 1px solid rgba($red, 0.18);
+            display: block;
+            padding: 10px 0;
+            transition: 0.3s color ease-in-out, 0.3s font-size ease-in-out, font-weight 0.3s ease-in-out;
+            font-size: 16px;
+            &.active,
+            &:hover {
+                color: $red;
+            }            
+        }
+        &__sublinks {
+            position: relative;
+            overflow: unset;
+                > li {
+                    &:first-child {
+                        margin-top: 15px;
+                        border-top: 1px solid $red;
+                    }
+                }
+            a {
+                color: #585858;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 13px;
+                &.active {
+                    font-size: 16px;
+                    font-weight: $medium;
+                }
+            }
+            &-children {
+                padding-left: 30px;
+                overflow: unset;
+                a {
+                    color: #95989A;
+                }
+            }            
+        }
+    }
+}

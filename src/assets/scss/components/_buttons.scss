@@ -1,0 +1,65 @@
+%api__button,
+.api__button {
+    position: relative;
+    text-align: center;
+    border-radius: 21px;
+    background-color: $red;
+    color: $white;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: $medium;
+    border: 0;
+    transition: 0.3s ease-in-out opacity, 0.3s ease-in-out color, 0.3s ease-in-out background-color;
+    &:hover {
+        opacity: 0.8;
+    }
+    // Inverse
+    &--inverse {
+        @extend .api__button;
+        background-color: transparent;
+        color: $red;
+        border: 1px solid $red;
+        &:hover {
+            color: $white;
+            background-color: $red;
+        }
+    }
+    // Arrow
+    &-arrow__right {
+        @extend .api__button;
+        padding-right: 30px;
+        &:before {
+            content: '\e804';
+            position: absolute;
+            font-family: 'icons';
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+        }
+        // Arrow inverse
+        &--inverse {
+            @extend .api__button-arrow__right;
+            @extend .api__button--inverse;
+        }
+        &--simple {
+            @extend .api__button-arrow__right;
+            background-color: transparent;
+            border: 0;
+            color: $red;
+            font-weight: $medium;
+        }
+    }
+}
+
+%api__button--inverse {
+    @extend .api__button--inverse;
+}
+
+%api__button-arrow__right {
+    @extend .api__button-arrow__right;
+}
+
+%api__button-arrow__right--inverse {
+    @extend .api__button-arrow__right--inverse;
+}

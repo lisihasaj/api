@@ -1,0 +1,36 @@
+// GENERAL
+%v-align-center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%h-align-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+%align-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// FLEX
+%flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%fullHeight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include box(100%);
+}

@@ -1,0 +1,48 @@
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .fade-1-enter-active, .fade-1-leave-active {
+    transition: opacity .2s;
+  }
+  .fade-1-enter, .fade-1-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* Transition name dropdown */ 
+.dropdown-enter-active, .dropdown-leave-active {
+  will-change: height;
+  transition: height 0.3s ease;
+}
+.dropdown-enter, .dropdown-leave-to {
+  height: 0 !important;
+}
+
+/* Transition name dropdownSidebar */ 
+.dropdownSidebar-enter-active, .dropdownSidebar-leave-active {
+  max-height: 250px;
+  transition: all 0.5s ease;
+}
+.dropdownSidebar-enter, .dropdownSidebar-leave-to {
+  max-height: 0;
+  transition: all 0.5s ease;
+}
+
+
+.accordion-item-enter-active, .accordion-item-leave-active {
+  will-change: height;
+  transition: height 0.3s ease;
+}
+.accordion-item-enter, .accordion-item-leave-to {
+  height: 0 !important;
+}

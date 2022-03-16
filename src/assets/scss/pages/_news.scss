@@ -1,0 +1,259 @@
+%newsBg {
+    background-image: url('/images/news-bg.png');
+    background-color: #F2F2F2;
+    @extend %cover;
+}
+
+.news {
+    // In News Section
+    @extend %newsBg;
+    background-attachment: fixed;
+    padding-top: 100px;
+    width: 100%;
+    @include computer-scr {
+        padding-top: 0;
+        min-height: 100vh;
+    }
+    // Slider in home section
+    &__home {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        @extend %newsBg;
+        .swiper__wrapper {
+            @include tablet-scr {
+                padding-left: 20px;
+            }
+            @include mobile-scr {
+                padding-left: 0;
+            }
+            .btn-next,
+            .btn-prev {
+                @include lg-computer-scr {
+                    background: transparent !important;
+                    width: 50px;
+                }
+            }
+            .btn-next {
+                right: 0;
+                background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+            }
+            .btn-prev {
+                left: 0;
+                background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+            }
+        }
+    }
+    &-sliders {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 100vw;
+        &__wrapper {
+            padding: 100px 0 0 400px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @include computer-scr {
+                padding-left: 30px;
+            }
+            h1 {
+                @include fontSize(50, 46, 40, 34, 30);
+                color: $red;
+                font-weight: $semiBold;
+                line-height: 1;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__slider {
+        width: 100%;
+        padding-bottom: 30px;
+        > h3 {
+            @include fontSize(66, 60, 55, 50);
+            font-weight: $light;
+            color: #95989A;
+        }
+        .swiper {
+            padding-left: 0;
+            &-pagination-progressbar {
+                background-color: $white;
+                &-fill {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+    .scrollactive-item {
+        font-size: 13px !important;
+        &.is-active {
+            color: $red;
+            font-size: 16px !important;
+        }
+    }
+}
+
+
+// Single News Page
+
+.news__page {
+    @extend %newsBg;
+    padding-top: 100px;
+    &-container {
+        position: relative;
+        padding: 0 15px;
+        max-width: 1320px;
+        margin: auto;
+        > h2 {
+            @include fontSize(66, 60, 55, 50);
+            color: $red;
+            font-weight: $semiBold;
+        }
+    }
+    &-back {
+        color: $red;
+        position: absolute;
+        top: 100px;
+        left: -130px;
+        display: flex;
+        align-items: center;
+        @media(max-width: 1560px) {
+            left: -70px;
+        }
+        @media(max-width: 1430px) {
+            position: relative;
+            left: auto;
+            top: auto;
+        }
+    }
+    &-header {
+        position: relative;
+        background-color: $white;
+        text-align: center;
+        border-bottom: 2px solid #F2F2F2;
+        padding: 30px 0;
+        span {
+            color: $red;
+            font-weight: $medium;
+            @include fontSize(22, 20, 18, 16);
+        }
+        h1 {
+            color: #585858;
+            font-weight: $semiBold;
+            @include fontSize(35, 32, 30, 28);
+        }
+    }
+    &-image {
+        position: relative;
+        @extend %cover;
+        height: 380px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    &-body {
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: $white;
+        padding: 50px 100px;
+        color: #585858;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+        @include computer-scr {
+            padding: 50px;
+        }
+        @include tablet-scr {
+            padding: 50px 30px;
+        }
+        @include mobile-scr {
+            align-items: center;
+            padding: 30px 15px;
+        }
+        a {
+            color: $red;
+        }
+        table {
+            width: 100%;
+            tr {
+                td {
+                    width: 33%;
+                    padding: 20px 0;
+                    img {
+                        width: auto !important;
+                        height: 220px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Related News
+
+.related__news {
+    padding: 50px 0;
+    > h2 {
+        @include fontSize(25, 22, 20, 18);
+        font-weight: $semiBold;
+        color: $red;
+        margin-bottom: 20px;
+    }
+    &-list {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-right: -20px;
+        @include computer-scr {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        @include tablet-scr {
+            margin-left: -7.5px;
+            margin-right: -7.5px;
+        }        
+    }
+    &-item {
+        width: calc(100% / 4 - 40px);
+        text-align: center;
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px 10px;
+        margin: 0 20px 20px;
+        @include computer-scr {
+            width: calc(100% / 3 - 30px);
+            margin: 0 15px 15px;
+        }
+        @include tablet-scr {
+            width: calc(100% / 2 - 15px);
+            margin: 0 7.5px 7.5px;
+        }
+        span {
+            color: $red;
+            font-weight: $medium;
+            font-size: 11px;
+        }
+        h3 {
+            @include fontSize(18, 16);
+            font-weight: $semiBold;
+            color: #585858;
+            margin-top: 10px;
+        }
+    }
+    .view__more__news {
+        text-align: right;
+        button {
+            font-size: 17px;
+            color: $red;
+            font-weight: $semiBold;
+            i {
+                font-size: 14px;
+            }
+        }
+    }
+}
